@@ -100,9 +100,6 @@ Em *Gerenciamento de código fonte* marque a opção git e cole a url do seu rep
 
 Em *trigger de builds* selecione *Construir periodicamente*. No campo de texto digite *@daily*.
 
-<!-- Depois vá para *build* e selecione *executar shell*. Nele é para colocar o comando de build do sistema. Vou usar os comandos:
-
-	git pull -->
 
 Em *Ações de pós-build* selecione *Editable Email Notification*.
 
@@ -133,3 +130,4 @@ O comando acima irá criar uma imagem, agora é possível criar um conteiner a p
 	docker run -dit --name apache -p 80:80 --restart always -v "$PWD"/jenkins_home/workspace/site:/usr/local/apache2/htdocs apache
 
 **Agora seu site está rodando, só acessar o ip da máquina hospedeira no navegador. Também, qualquer alteração na pasta site aparecerá automaticamente no navegador**
+**OBS: caso o site não atualize sozinho (o css) apertar ctrl+shif+r**
